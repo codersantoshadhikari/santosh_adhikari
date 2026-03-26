@@ -1,497 +1,413 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Santosh Adhikari | 9D Cyber Nexus</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Three.js Core -->
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
-            }
-        }
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Dynamic Header with Matrix Rain Effect -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%">
+</div>
 
-        body {
-            background-color: #010101;
-            font-family: 'Inter', 'Fira Code', monospace;
-            overflow-x: hidden;
-            color: #e0e0e0;
-            scroll-behavior: smooth;
-        }
+<!-- Animated Gradient Typing Effect - 9D Hologram -->
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=40&duration=2500&pause=500&color=00FF9D&center=true&vCenter=true&width=1000&height=120&lines=%3E+SYSTEM_BOOT_SEQUENCE:9D_ACTIVATED;%3E+USER_ID:SANTOSH_ADHIKARI;%3E+ACCESS_LEVEL:OMEGA_ROOT;%3E+CURRENT_STATUS:TRANSCENDENT_%F0%9F%9A%80;%3E+READY_FOR_DIMENSIONAL_COLLAB" alt="9D Matrix Typing Animation" />
+  </a>
+</div>
 
-        /* 9D Glow & Matrix Core */
-        .glow-text {
-            text-shadow: 0 0 5px #00ff9d, 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 40px #00cc77;
-        }
+<!-- Animated 3D Stats Cards with Neon Pulse -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=codersantoshadhikari&label=⚡PROFILE+VIEWS&color=00ff9d&style=for-the-badge" alt="Profile Views" />
+  <img src="https://img.shields.io/badge/🚀_WAKATIME-2800+_HOURS-00ff9d?style=for-the-badge&logo=wakatime" alt="WakaTime" />
+  <img src="https://img.shields.io/github/followers/codersantoshadhikari?label=👾_FOLLOWERS&style=for-the-badge&color=00ff9d" alt="Followers" />
+</p>
 
-        .neon-border {
-            border: 1px solid rgba(0, 255, 157, 0.5);
-            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3), inset 0 0 10px rgba(0, 255, 157, 0.2);
-            transition: all 0.3s ease;
-        }
+<!-- Personal Website Banner - Glassmorphic -->
+<div align="center">
+  <a href="https://santoshadhikari.com.np" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_VISIT_OFFICIAL_9D_NEXUS-00ff9d?style=for-the-badge&logo=google-chrome&logoColor=black&labelColor=0D1117&fontSize=30" width="600" alt="Website Banner"/>
+  </a>
+  <br/>
+  <sub><b>santoshadhikari.com.np</b> | 9D Portfolio & Cyber Tech Blog</sub>
+</div>
 
-        .neon-border:hover {
-            border-color: #00ff9d;
-            box-shadow: 0 0 25px #00ff9d, inset 0 0 15px #00ff9d;
-        }
+<br/>
 
-        /* Animated Background Canvas */
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            pointer-events: none;
-        }
+<!-- Main Header with Neon Hologram Effect -->
+<h1 align="center">
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">
+  <span style="background: linear-gradient(135deg, #00ff9d, #00ccff, #ff00cc); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 30px #00ff9d;">SANTOSH ADHIKARI</span>
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">
+</h1>
 
-        .matrix-rain-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.2;
-            pointer-events: none;
-            background: repeating-linear-gradient(0deg, #00ff9d20 0px, #00ff9d20 2px, transparent 2px, transparent 6px);
-        }
+<h3 align="center">
+  <code style="background: rgba(0, 255, 157, 0.15); padding: 12px 24px; border-radius: 60px; border: 2px solid #00ff9d; backdrop-filter: blur(10px); color: #00ff9d; font-weight: bold;">
+    [ SENIOR ARCHITECT | CEO @ SMAIT TECHNOLOGY | CYBER PHANTOM | 9D MASTER ]
+  </code>
+</h3>
 
-        /* Glassmorphic 9D Cards */
-        .glass-card {
-            background: rgba(5, 10, 20, 0.55);
-            backdrop-filter: blur(12px);
-            border-radius: 2rem;
-            border: 1px solid rgba(0, 255, 157, 0.4);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0,255,157,0.2);
-            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.4s;
-        }
+<!-- Animated Code Window with 3D Rotation -->
+<div align="center">
+  <div style="perspective: 1000px;">
+    <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="500" style="border-radius: 30px; border: 3px solid #00ff9d; box-shadow: 0 0 50px #00ff9d, 0 20px 40px rgba(0,0,0,0.5); transform: rotateX(5deg); transition: transform 0.5s;" alt="Coding Animation"/>
+  </div>
+</div>
 
-        .glass-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 50px rgba(0,0,0,0.5), 0 0 35px #00ff9d;
-        }
+<!-- Animated Separator with Glow -->
+<img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
 
-        /* 3D Flip Container */
-        .flip-3d {
-            perspective: 1500px;
-        }
-        .flip-inner {
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-        .flip-3d:hover .flip-inner {
-            transform: rotateY(180deg);
-        }
-        .flip-front, .flip-back {
-            backface-visibility: hidden;
-            border-radius: 1.5rem;
-        }
-        .flip-back {
-            transform: rotateY(180deg);
-            background: rgba(0,0,0,0.85);
-            backdrop-filter: blur(8px);
-        }
-
-        /* Animated skill bars */
-        .skill-bar {
-            background: #0a0f1f;
-            border-radius: 1rem;
-            overflow: hidden;
-        }
-        .skill-fill {
-            background: linear-gradient(90deg, #00ff9d, #00cc77);
-            width: 0%;
-            transition: width 1.5s cubic-bezier(0.22, 0.97, 0.36, 1.02);
-            box-shadow: 0 0 8px #00ff9d;
-        }
-
-        /* Infinite marquee tech icons */
-        @keyframes scrollIcons {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .tech-marquee {
-            display: flex;
-            animation: scrollIcons 20s linear infinite;
-            width: max-content;
-        }
-        .tech-marquee img {
-            margin: 0 20px;
-            filter: drop-shadow(0 0 6px #00ff9d);
-        }
-
-        /* custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0a0f1f;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #00ff9d;
-            border-radius: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .hover-lift {
-            transition: all 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            filter: drop-shadow(0 0 12px #00ff9d);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 3D Background Canvas (9D Orbital Core) -->
-    <canvas id="bg-canvas"></canvas>
-    <div class="matrix-rain-bg"></div>
-
-    <!-- Main Container -->
-    <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 20px; position: relative; z-index: 2;">
-        
-        <!-- Header Snake / Matrix Banner (SVG) -->
-        <div align="center" style="margin-bottom: 2rem;">
-            <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" style="border-radius: 30px; opacity: 0.9;">
-        </div>
-
-        <!-- Typing SVG with Hologram Effect -->
-        <div align="center" style="margin: 20px 0 20px;">
-            <a href="https://git.io/typing-svg">
-                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=38&duration=2800&pause=600&color=00FF9D&center=true&vCenter=true&width=1100&height=130&lines=%3E+SYSTEM_BOOT_SEQUENCE:9D_ACTIVATED;%3E+USER:SANTOSH_ADHIKARI;%3E+ROOT_ACCESS:GRANTED;%3E+CEO_@_SMAIT_TECHNOLOGY;%3E+CYBER_SHADOW_MODE:ON" alt="9D Matrix Typing" />
-            </a>
-        </div>
-
-        <!-- Stats Badges Animated -->
-        <p align="center">
-            <img src="https://komarev.com/ghpvc/?username=codersantoshadhikari&label=⚡PROFILE+VIEWS&color=00ff9d&style=for-the-badge" />
-            <img src="https://img.shields.io/badge/🚀_WAKATIME-2500+_HOURS-00ff9d?style=for-the-badge&logo=wakatime" />
-            <img src="https://img.shields.io/github/followers/codersantoshadhikari?label=👾_FOLLOWERS&style=for-the-badge&color=00ff9d" />
-        </p>
-
-        <!-- Personal Website Hologram Banner -->
-        <div align="center" class="glass-card" style="width: fit-content; margin: 20px auto; padding: 12px 25px;">
-            <a href="https://santoshadhikari.com.np" target="_blank">
-                <i class="fas fa-globe" style="color:#00ff9d; margin-right: 12px;"></i>
-                <span style="font-weight: bold; letter-spacing: 1px;">🌐 OFFICIAL NEXUS: SANTOSHADHIKARI.COM.NP</span>
-                <i class="fas fa-arrow-right" style="margin-left: 12px;"></i>
-            </a>
-        </div>
-
-        <!-- Main Title with 3D Rotation effect -->
-        <h1 align="center" style="font-size: 4rem; font-weight: 900; margin: 20px 0;">
-            <span style="background: linear-gradient(135deg, #00ff9d, #00ccff, #aa00ff); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 20px #00ff9d;">
-                SANTOSH ADHIKARI
-            </span>
-            <span style="display: inline-block; animation: pulse-glow 2s infinite;">⚡</span>
-        </h1>
-        <h3 align="center">
-            <code style="background: #000000aa; padding: 12px 20px; border-radius: 60px; border: 1px solid #00ff9d; backdrop-filter: blur(8px); font-weight: bold;">
-                [ SENIOR ARCHITECT | CEO @ SMAIT | CYBER PHANTOM ]
-            </code>
-        </h3>
-
-        <!-- 9D Coding Animation Hologram -->
-        <div align="center" style="margin: 40px 0;">
-            <div class="glass-card" style="display: inline-block; padding: 10px; border-radius: 50px;">
-                <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="520" style="border-radius: 40px; border: 2px solid #00ff9d; box-shadow: 0 0 35px #00ff9d;" alt="Coding Matrix"/>
-            </div>
-        </div>
-
-        <!-- Bio Glassmorphism System Specs -->
-        <div align="center">
-            <div class="glass-card" style="padding: 30px; width: 95%; margin: 20px auto;">
-                <h2 style="color:#00ff9d;"><i class="fas fa-microchip"></i> SYSTEM OVERRIDE <i class="fas fa-database"></i></h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; margin-top: 25px;">
-                    <div><i class="fas fa-briefcase"></i> <b>6+ Years</b> Full-Cycle</div>
-                    <div><i class="fas fa-rocket"></i> <b>60+</b> Applications</div>
-                    <div><i class="fas fa-chart-line"></i> <b>1M+</b> Global Users</div>
-                    <div><i class="fas fa-crown"></i> <b>CEO</b> @ SMAIT Technology</div>
-                    <div><i class="fas fa-shield-alt"></i> <b>CEH | OSCP</b> Level</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 9D Stats Dashboard with Hologram Effect -->
-        <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 40px 0;">
-            <div class="glass-card" style="padding: 20px; width: 320px;">
-                <img src="https://github-readme-stats.vercel.app/api?username=codersantoshadhikari&show_icons=true&count_private=true&theme=chartreuse-dark&hide_border=true&bg_color=00000000&title_color=00ff9d&icon_color=00ff9d&text_color=fff&border_radius=20" width="100%"/>
-            </div>
-            <div class="glass-card" style="padding: 20px; width: 320px;">
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=codersantoshadhikari&theme=chartreuse-dark&hide_border=true&background=00000000&stroke=00ff9d&ring=00ff9d&fire=00ff9d&currStreakNum=fff&sideNums=fff&border_radius=20" width="100%"/>
-            </div>
-            <div class="glass-card" style="padding: 20px; width: 320px;">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codersantoshadhikari&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=00000000&title_color=00ff9d&text_color=fff&border_radius=20" width="100%"/>
-            </div>
-        </div>
-
-        <!-- 3D Trophy Case animated -->
-        <div align="center">
-            <img src="https://github-profile-trophy.vercel.app/?username=codersantoshadhikari&theme=matrix&no-frame=true&no-bg=true&row=2&column=4&margin-w=15&margin-h=15" width="100%" style="filter: drop-shadow(0 0 12px #00ff9d);"/>
-        </div>
-
-        <!-- CORE COMPETENCIES: FLIP 3D Cards (9D Interactive) -->
-        <h2 align="center" style="margin: 70px 0 30px;"><span style="background: #00ff9d20; padding: 8px 25px; border-radius: 60px;">⚡ 9D CORE COMPETENCIES ⚡</span></h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-            <!-- flip card 1 -->
-            <div class="flip-3d" style="width: 250px; height: 280px;">
-                <div class="flip-inner relative w-full h-full">
-                    <div class="flip-front absolute w-full h-full glass-card flex flex-col items-center justify-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <i class="fas fa-mobile-alt" style="font-size: 55px; color:#00ff9d;"></i>
-                        <h3 style="margin-top: 15px;">MOBILE</h3>
-                        <p>Flutter • RN • Kotlin</p>
-                        <div class="skill-bar w-3/4 mt-2"><div class="skill-fill h-2" style="width: 95%;"></div></div>
-                    </div>
-                    <div class="flip-back absolute w-full h-full glass-card flex items-center justify-center text-center p-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <p>95% Mastery</p>
-                        <p>20+ cross-platform apps</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-3d" style="width: 250px; height: 280px;">
-                <div class="flip-inner relative w-full h-full">
-                    <div class="flip-front absolute w-full h-full glass-card flex flex-col items-center justify-center">
-                        <i class="fas fa-gamepad" style="font-size: 55px; color:#00ff9d;"></i>
-                        <h3>GAME ENGINES</h3>
-                        <p>Unity • Unreal • Ludo Logic</p>
-                        <div class="skill-bar w-3/4 mt-2"><div class="skill-fill h-2" style="width: 98%;"></div></div>
-                    </div>
-                    <div class="flip-back absolute w-full h-full glass-card flex items-center justify-center text-center p-4">
-                        <p>98% | Ludo Empire: 1M+ DL</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-3d" style="width: 250px; height: 280px;">
-                <div class="flip-inner relative w-full h-full">
-                    <div class="flip-front absolute w-full h-full glass-card flex flex-col items-center justify-center">
-                        <i class="fas fa-shield-hog" style="font-size: 55px; color:#00ff9d;"></i>
-                        <h3>CYBER SECURITY</h3>
-                        <p>Kali • Metasploit • CEH</p>
-                        <div class="skill-bar w-3/4 mt-2"><div class="skill-fill h-2" style="width: 92%;"></div></div>
-                    </div>
-                    <div class="flip-back absolute w-full h-full glass-card flex items-center justify-center text-center p-4">
-                        <p>Certified Ethical Hacker</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-3d" style="width: 250px; height: 280px;">
-                <div class="flip-inner relative w-full h-full">
-                    <div class="flip-front absolute w-full h-full glass-card flex flex-col items-center justify-center">
-                        <i class="fas fa-cloud" style="font-size: 55px; color:#00ff9d;"></i>
-                        <h3>CLOUD & BACKEND</h3>
-                        <p>AWS • Firebase • Node</p>
-                        <div class="skill-bar w-3/4 mt-2"><div class="skill-fill h-2" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="flip-back absolute w-full h-full glass-card flex items-center justify-center text-center p-4">
-                        <p>Scalable infra for 1M+ users</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tech Stack Marquee infinite scroll -->
-        <h2 align="center" style="margin: 80px 0 20px;">🔧 9D TECH STACK OVERFLOW 🔧</h2>
-        <div class="glass-card" style="overflow: hidden; padding: 20px 0; margin: 20px 0;">
-            <div class="tech-marquee">
-                <img src="https://skillicons.dev/icons?i=dart,kotlin,swift,js,ts,python,unity,flutter,react,androidstudio,firebase,aws,nodejs,mongodb,git,docker" height="50" style="margin:0 25px;" />
-                <img src="https://skillicons.dev/icons?i=dart,kotlin,swift,js,ts,python,unity,flutter,react,androidstudio,firebase,aws,nodejs,mongodb,git,docker" height="50" style="margin:0 25px;" />
-            </div>
-        </div>
-
-        <!-- Flagship Projects 3D Cards -->
-        <h2 align="center"><span style="color:#00ff9d;">🏆 FLAGSHIP PROJECTS [NEO] 🏆</span></h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0;">
-            <div class="glass-card" style="width: 320px; padding: 20px; text-align: center;">
-                <i class="fas fa-dice-d6" style="font-size: 65px; color:#00ff9d;"></i>
-                <h3>LUDO EMPIRE</h3>
-                <p>Real-time multiplayer | 1M+ downloads</p>
-                <div><i class="fab fa-google-play"></i> 4.5★</div>
-                <a href="#"><span style="color:#00ff9d;">View Project →</span></a>
-            </div>
-            <div class="glass-card" style="width: 320px; padding: 20px; text-align: center;">
-                <i class="fas fa-chart-line" style="font-size: 65px; color:#00ff9d;"></i>
-                <h3>SME BUSINESS SUITE</h3>
-                <p>Complete ERP | 10k+ businesses</p>
-                <div><i class="fas fa-cloud-upload-alt"></i> 99.9% Uptime</div>
-                <a href="#"><span style="color:#00ff9d;">Live Demo →</span></a>
-            </div>
-            <div class="glass-card" style="width: 320px; padding: 20px; text-align: center;">
-                <i class="fas fa-lock" style="font-size: 65px; color:#00ff9d;"></i>
-                <h3>SECURE AUTH PRO</h3>
-                <p>Banking-grade 2FA, Biometric</p>
-                <div><i class="fas fa-shield-alt"></i> Zero breach</div>
-                <a href="#"><span style="color:#00ff9d;">GitHub →</span></a>
-            </div>
-            <div class="glass-card" style="width: 320px; padding: 20px; text-align: center;">
-                <i class="fas fa-building" style="font-size: 65px; color:#00ff9d;"></i>
-                <h3>SMAIT PORTAL</h3>
-                <p>Official Company Nexus</p>
-                <div><i class="fas fa-globe"></i> Modern React</div>
-                <a href="#"><span style="color:#00ff9d;">smaittechnology.com.np →</span></a>
-            </div>
-        </div>
-
-        <!-- LIVE ACTIVITY GRAPH -->
-        <div align="center" class="glass-card" style="padding: 20px; margin: 40px 0;">
-            <h3>📡 LIVE NEURAL ACTIVITY GRAPH</h3>
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=codersantoshadhikari&bg_color=00000000&color=00ff9d&line=00ff9d&point=ffffff&area=true&hide_border=true" width="100%"/>
-        </div>
-
-        <!-- Weekly Coding Metrics + Education -->
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-            <div class="glass-card" style="flex: 1; min-width: 280px; padding: 20px;">
-                <h3><i class="fas fa-chart-simple"></i> WEEKLY CODING METRICS</h3>
-                <img src="https://github-readme-stats.vercel.app/api/wakatime?username=codersantoshadhikari&theme=chartreuse-dark&hide_border=true&bg_color=00000000&title_color=00ff9d" width="100%"/>
-            </div>
-            <div class="glass-card" style="flex: 1; min-width: 280px; padding: 20px;">
-                <h3><i class="fas fa-graduation-cap"></i> CERTIFICATIONS</h3>
-                <ul style="list-style: none;">
-                    <li><i class="fas fa-check-circle" style="color:#00ff9d;"></i> MBA in Ethical Hacking</li>
-                    <li><i class="fas fa-check-circle" style="color:#00ff9d;"></i> Google Flutter Certified</li>
-                    <li><i class="fas fa-check-circle" style="color:#00ff9d;"></i> Unity Certified Developer</li>
-                    <li><i class="fas fa-check-circle" style="color:#00ff9d;"></i> CEH (EC-Council)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Connect Hologram Cards -->
-        <h2 align="center" style="margin: 60px 0 20px;">🌐 DIMENSIONAL CONNECT 🌐</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 50px;">
-            <a href="https://santoshadhikari.com.np" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fas fa-user-astronaut"></i> PORTFOLIO</a>
-            <a href="https://linkedin.com/in/codersantoshadhikari" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fab fa-linkedin"></i> LINKEDIN</a>
-            <a href="https://github.com/codersantoshadhikari" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fab fa-github"></i> GITHUB</a>
-            <a href="https://twitter.com/santosh215" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fab fa-twitter"></i> X</a>
-            <a href="https://youtube.com/@smaittechnology" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fab fa-youtube"></i> YT</a>
-            <a href="mailto:santosh.ad215@gmail.com" class="glass-card hover-lift" style="padding: 15px 25px;"><i class="fas fa-envelope"></i> EMAIL</a>
-        </div>
-
-        <!-- Support Section -->
-        <div align="center" class="glass-card" style="display: inline-block; width: auto; margin: 0 auto; padding: 25px 50px;">
-            <h3>💖 Fuel the Matrix 💖</h3>
-            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 15px;">
-                <a href="https://buymeacoffee.com/santoshadh7"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50"></a>
-                <a href="https://github.com/sponsors/codersantoshadhikari"><img src="https://img.shields.io/badge/SPONSOR-00ff9d?style=for-the-badge&logo=github-sponsors" height="50"></a>
-            </div>
-        </div>
-
-        <!-- Terminal Easter Egg Quote -->
-        <div align="center" style="margin-top: 50px;">
-            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" width="80%" style="border-radius: 20px;"/>
-        </div>
-
-        <div align="center" style="margin: 40px 0 20px;">
-            <sub>
-                <i class="fas fa-sync-alt"></i> AUTO-SYNC ACTIVE | <i class="fas fa-charging-station"></i> 9D NEURAL LINK | STATUS: OMEGA ONLINE
-            </sub>
-        </div>
+<!-- Professional Bio with Glassmorphism - 9D Specs -->
+<div align="center">
+  <div style="background: rgba(0, 255, 157, 0.08); backdrop-filter: blur(12px); border-radius: 30px; border: 2px solid #00ff9d; width: 90%; padding: 20px; box-shadow: 0 0 40px rgba(0,255,157,0.3);">
+    <br/>
+    <img src="https://img.icons8.com/fluency/96/000ormation.png" width="50"/>
+    <h2 style="color: #00ff9d; text-shadow: 0 0 15px #00ff9d;">⚡ 9D SYSTEM SPECIFICATIONS ⚡</h2>
+    <br/>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <div><b>Experience:</b> <span style="color: #00ff9d;">6+ Years</span> in Full-Cycle Development</div>
+      <div><b>Projects Delivered:</b> <span style="color: #00ff9d;">60+ Applications</span></div>
+      <div><b>Published Apps:</b> <span style="color: #00ff9d;">15+ on App Stores</span></div>
+      <div><b>User Base:</b> <span style="color: #00ff9d;">1M+ Worldwide</span></div>
+      <div><b>Company:</b> <span style="color: #00ff9d;">CEO @ SMAIT Technology</span></div>
+      <div><b>Specialization:</b> <span style="color: #00ff9d;">Mobile Architecture | Game Engineering | Security</span></div>
     </div>
+    <br/>
+  </div>
+</div>
 
-    <!-- Three.js 9D Core Animation -->
-    <script type="module">
-        import * as THREE from 'three';
+<!-- Stats Dashboard with Holographic Cards -->
+<div align="center">
+  <h2>
+    <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="25">
+    <span style="color: #00ff9d; text-shadow: 0 0 10px #00ff9d;">9D PERFORMANCE METRICS</span>
+  </h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div style="background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid #00ff9d; padding: 15px;">
+      <img src="https://github-readme-stats.vercel.app/api?username=codersantoshadhikari&show_icons=true&count_private=true&include_all_commits=true&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00ff9d&icon_color=00ff9d&text_color=FFFFFF&border_radius=20" width="100%" />
+    </div>
+    <div style="background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid #00ff9d; padding: 15px;">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=codersantoshadhikari&theme=chartreuse-dark&hide_border=true&background=0D1117&stroke=00ff9d&ring=00ff9d&fire=00ff9d&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00ff9d&sideLabels=FFFFFF&dates=9F9F9F&border_radius=20" width="100%" />
+    </div>
+  </div>
+</div>
 
-        const canvas = document.getElementById('bg-canvas');
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x010101);
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 2, 8);
-        camera.lookAt(0, 0, 0);
+<!-- Language Stats with 3D Effect -->
+<div align="center">
+  <div style="background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid #00ff9d; padding: 15px; display: inline-block;">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codersantoshadhikari&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00ff9d&text_color=FFFFFF&border_radius=20" width="400" />
+  </div>
+</div>
 
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: false });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+<!-- 3D Trophy Case with Hologram -->
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=codersantoshadhikari&theme=matrix&no-frame=true&no-bg=true&row=2&column=4&margin-w=15&margin-h=15" width="100%" style="filter: drop-shadow(0 0 20px #00ff9d);"/>
+</div>
 
-        // Core Energy Torus
-        const torusGeo = new THREE.TorusGeometry(1.8, 0.25, 64, 200);
-        const materialCore = new THREE.MeshStandardMaterial({ color: 0x00ff9d, emissive: 0x00aa66, emissiveIntensity: 1.2, metalness: 0.8, roughness: 0.2 });
-        const torus = new THREE.Mesh(torusGeo, materialCore);
-        scene.add(torus);
+<!-- Animated Separator -->
+<img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
 
-        // Icosahedron floating
-        const icoGeo = new THREE.IcosahedronGeometry(0.9, 0);
-        const icoMat = new THREE.MeshStandardMaterial({ color: 0x00cc88, wireframe: false, emissive: 0x006633, emissiveIntensity: 0.7 });
-        const ico = new THREE.Mesh(icoGeo, icoMat);
-        scene.add(ico);
+<!-- Expertise Showcase with 3D Flip Cards - 9D Interactive -->
+<h2 align="center">
+  <span style="color: #00ff9d; background: rgba(0,255,157,0.1); padding: 8px 30px; border-radius: 60px;">⚡ 9D CORE COMPETENCIES ⚡</span>
+</h2>
 
-        // Particle system (Matrix rain style)
-        const particlesGeo = new THREE.BufferGeometry();
-        const particleCount = 1800;
-        const posArray = new Float32Array(particleCount * 3);
-        for(let i = 0; i < particleCount; i++) {
-            posArray[i*3] = (Math.random() - 0.5) * 30;
-            posArray[i*3+1] = (Math.random() - 0.5) * 20;
-            posArray[i*3+2] = (Math.random() - 0.5) * 15 - 5;
-        }
-        particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-        const particleMat = new THREE.PointsMaterial({ color: 0x00ff9d, size: 0.07, transparent: true, opacity: 0.5 });
-        const particles = new THREE.Points(particlesGeo, particleMat);
-        scene.add(particles);
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
+    <div style="width: 240px; height: 280px; perspective: 1500px;">
+      <div style="position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0, 255, 157, 0.1); backdrop-filter: blur(10px); border-radius: 20px; border: 2px solid #00ff9d; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <img src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" width="100" style="border-radius: 15px;"/>
+          <h3 style="color: #00ff9d;">📱 MOBILE</h3>
+          <p>Flutter • React Native<br/>Kotlin • Swift</p>
+          <div style="width: 80%; background: #0a0f1f; border-radius: 20px;"><div style="width: 95%; background: linear-gradient(90deg, #00ff9d, #00cc77); height: 6px; border-radius: 20px;"></div></div>
+        </div>
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); border-radius: 20px; border: 2px solid #00ff9d; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <p style="color:#00ff9d;">🎯 95% Mastery</p>
+          <p>20+ Cross-Platform Apps</p>
+          <p>Architect Level</p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 240px; height: 280px; perspective: 1500px;">
+      <div style="position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0, 255, 157, 0.1); backdrop-filter: blur(10px); border-radius: 20px; border: 2px solid #00ff9d; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <img src="https://media.giphy.com/media/l0MYEqE0MWEdgOWCk/giphy.gif" width="100" style="border-radius: 15px;"/>
+          <h3 style="color: #00ff9d;">🎮 GAMES</h3>
+          <p>Unity 3D • Ludo Expert<br/>Multiplayer Systems</p>
+          <div style="width: 80%; background: #0a0f1f; border-radius: 20px;"><div style="width: 98%; background: linear-gradient(90deg, #00ff9d, #00cc77); height: 6px; border-radius: 20px;"></div></div>
+        </div>
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); border-radius: 20px; border: 2px solid #00ff9d; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <p style="color:#00ff9d;">🎯 98% Mastery</p>
+          <p>Ludo Empire: 1M+ DL</p>
+          <p>Real-time Multiplayer</p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 240px; height: 280px; perspective: 1500px;">
+      <div style="position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0, 255, 157, 0.1); backdrop-filter: blur(10px); border-radius: 20px; border: 2px solid #00ff9d; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <img src="https://media.giphy.com/media/3o7abB06u9bNzA8LC8/giphy.gif" width="100" style="border-radius: 15px;"/>
+          <h3 style="color: #00ff9d;">🛡️ SECURITY</h3>
+          <p>Ethical Hacking • CEH<br/>Penetration Testing</p>
+          <div style="width: 80%; background: #0a0f1f; border-radius: 20px;"><div style="width: 92%; background: linear-gradient(90deg, #00ff9d, #00cc77); height: 6px; border-radius: 20px;"></div></div>
+        </div>
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); border-radius: 20px; border: 2px solid #00ff9d; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <p style="color:#00ff9d;">🎯 CEH Certified</p>
+          <p>Kali Linux • Metasploit</p>
+          <p>Zero-day Expert</p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 240px; height: 280px; perspective: 1500px;">
+      <div style="position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0, 255, 157, 0.1); backdrop-filter: blur(10px); border-radius: 20px; border: 2px solid #00ff9d; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <img src="https://media.giphy.com/media/juua9i2c2fA0VIp7iq/giphy.gif" width="100" style="border-radius: 15px;"/>
+          <h3 style="color: #00ff9d;">☁️ CLOUD</h3>
+          <p>AWS • Firebase • Node.js<br/>MongoDB</p>
+          <div style="width: 80%; background: #0a0f1f; border-radius: 20px;"><div style="width: 90%; background: linear-gradient(90deg, #00ff9d, #00cc77); height: 6px; border-radius: 20px;"></div></div>
+        </div>
+        <div style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: rgba(0,0,0,0.9); backdrop-filter: blur(12px); border-radius: 20px; border: 2px solid #00ff9d; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <p style="color:#00ff9d;">🎯 90% Mastery</p>
+          <p>Scalable Infrastructure</p>
+          <p>Serverless Architect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        // Lights
-        const ambientLight = new THREE.AmbientLight(0x111111);
-        scene.add(ambientLight);
-        const pointLight = new THREE.PointLight(0x00ff9d, 1);
-        pointLight.position.set(3, 3, 5);
-        scene.add(pointLight);
-        const backLight = new THREE.PointLight(0x2266ff, 0.5);
-        backLight.position.set(-2, 1, -4);
-        scene.add(backLight);
+<!-- Tech Stack with Animated Marquee -->
+<h2 align="center">
+  <span style="color: #00ff9d;">🔧 9D TECHNOLOGY STACK 🔧</span>
+</h2>
 
-        let time = 0;
-        function animate() {
-            requestAnimationFrame(animate);
-            time += 0.008;
-            torus.rotation.x += 0.008;
-            torus.rotation.y += 0.012;
-            ico.rotation.x = Math.sin(time * 0.7) * 0.3;
-            ico.rotation.y += 0.01;
-            particles.rotation.y += 0.0005;
-            particles.rotation.x = Math.sin(time * 0.2) * 0.1;
-            camera.position.z = 7 + Math.sin(time * 0.5) * 0.1;
-            camera.lookAt(0, 0, 0);
-            renderer.render(scene, camera);
-        }
-        animate();
+<div align="center">
+  <div style="overflow: hidden; white-space: nowrap; width: 100%; background: rgba(0, 255, 157, 0.05); padding: 20px 0; border-radius: 60px;">
+    <div style="display: inline-block; animation: scrollTech 25s linear infinite;">
+      <img src="https://skillicons.dev/icons?i=dart,kotlin,swift,js,ts,python,java,cs,php,flutter,react,unity,unreal,firebase,aws,nodejs,mongodb,git,docker,kubernetes&theme=dark" height="50" style="margin: 0 15px;" />
+      <img src="https://skillicons.dev/icons?i=dart,kotlin,swift,js,ts,python,java,cs,php,flutter,react,unity,unreal,firebase,aws,nodejs,mongodb,git,docker,kubernetes&theme=dark" height="50" style="margin: 0 15px;" />
+    </div>
+  </div>
+</div>
 
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
-    <script>
-        // Skill bars animation on scroll (simple observer)
-        const skillBars = document.querySelectorAll('.skill-fill');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = width ? width : '95%';
-                }
-            });
-        }, { threshold: 0.3 });
-        skillBars.forEach(bar => observer.observe(bar));
-        // set default widths manually
-        document.querySelectorAll('.skill-fill').forEach((el, idx) => {
-            const widths = ['95%','98%','92%','90%'];
-            if(el.style.width === '0%') el.style.width = widths[idx % widths.length];
-        });
-    </script>
-</body>
-</html>
+<style>
+@keyframes scrollTech {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.glass-card-3d {
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.glass-card-3d:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 50px rgba(0,255,157,0.3);
+}
+</style>
+
+<!-- Detailed Tech Tree -->
+<details>
+  <summary align="center">
+    <h3 style="color: #00ff9d; display: inline-block; cursor: pointer;">🌳 VIEW FULL 9D TECHNOLOGY TREE 🌳</h3>
+  </summary>
+  
+  <div align="center">
+    <table style="border: 2px solid #00ff9d; border-radius: 20px; background: rgba(0,0,0,0.6); width: 90%; margin: 20px auto;">
+      <tr style="border-bottom: 2px solid #00ff9d;">
+        <th style="color: #00ff9d; padding: 15px;">Category</th>
+        <th style="color: #00ff9d; padding: 15px;">Technologies</th>
+        <th style="color: #00ff9d; padding: 15px;">Proficiency</th>
+      </tr>
+      <tr>
+        <td style="padding: 12px;"><b>Mobile Development</b></td>
+        <td style="padding: 12px;">Flutter, React Native, Kotlin, Swift, Java</td>
+        <td style="padding: 12px;">⚡⚡⚡⚡⚡⚡⚡⚡⚡ 95%</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;"><b>Game Development</b></td>
+        <td style="padding: 12px;">Unity 3D, Unreal Engine, C#, Ludo Logic</td>
+        <td style="padding: 12px;">⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ 98%</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;"><b>Cyber Security</b></td>
+        <td style="padding: 12px;">Kali Linux, Metasploit, Wireshark, Burp Suite</td>
+        <td style="padding: 12px;">⚡⚡⚡⚡⚡⚡⚡⚡⚡ 92%</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;"><b>Cloud & Backend</b></td>
+        <td style="padding: 12px;">AWS, Firebase, Node.js, MongoDB, MySQL</td>
+        <td style="padding: 12px;">⚡⚡⚡⚡⚡⚡⚡⚡⚡ 90%</td>
+      </tr>
+    </table>
+  </div>
+</details>
+
+<!-- Featured Projects with 3D Hover -->
+<h2 align="center">
+  <span style="color: #00ff9d;">🏆 FLAGSHIP 9D PROJECTS 🏆</span>
+</h2>
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    <div class="glass-card-3d" style="width: 350px; border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px);">
+      <h3 align="center" style="color: #00ff9d;">🎮 LUDO EMPIRE</h3>
+      <div align="center">
+        <img src="https://media.giphy.com/media/3o7abB06u9bNzA8LC8/giphy.gif" width="180" style="border-radius: 15px;"/>
+        <p><b>Real-time Multiplayer Ludo Game</b><br/><span style="color: #00ff9d;">1M+ Downloads • 4.5★ Rating</span></p>
+        <p>
+          <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter"/>
+          <img src="https://img.shields.io/badge/Unity-100000?style=flat&logo=unity"/>
+          <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase"/>
+        </p>
+        <a href="https://play.google.com/store/apps/dev?id=8310692885659472367"><img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white"/></a>
+      </div>
+    </div>
+    <div class="glass-card-3d" style="width: 350px; border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px);">
+      <h3 align="center" style="color: #00ff9d;">💼 SME BUSINESS SUITE</h3>
+      <div align="center">
+        <img src="https://media.giphy.com/media/juua9i2c2fA0VIp7iq/giphy.gif" width="180" style="border-radius: 15px;"/>
+        <p><b>Complete Business Management Platform</b><br/><span style="color: #00ff9d;">10k+ Businesses • 99.9% Uptime</span></p>
+        <p>
+          <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter"/>
+          <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws"/>
+          <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js"/>
+        </p>
+        <a href="https://www.smaittechnology.com.np"><img src="https://img.shields.io/badge/LIVE_DEMO-00ff9d?style=for-the-badge&logo=google-chrome&logoColor=black"/></a>
+      </div>
+    </div>
+    <div class="glass-card-3d" style="width: 350px; border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px);">
+      <h3 align="center" style="color: #00ff9d;">🔐 SECURE AUTH PRO</h3>
+      <div align="center">
+        <img src="https://media.giphy.com/media/3o7abB06u9bNzA8LC8/giphy.gif" width="180" style="border-radius: 15px;"/>
+        <p><b>Enterprise Authentication System</b><br/><span style="color: #00ff9d;">Banking Grade Security • 2FA • Biometric</span></p>
+        <p>
+          <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter"/>
+          <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase"/>
+          <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js"/>
+        </p>
+        <a href="https://github.com/codersantoshadhikari/secure-auth-pro"><img src="https://img.shields.io/badge/VIEW_CODE-00ff9d?style=for-the-badge&logo=github&logoColor=black"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Live Activity Graph with Hologram Effect -->
+<h2 align="center">
+  <span style="color: #00ff9d;">📊 9D LIVE ACTIVITY FEED 📊</span>
+</h2>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=codersantoshadhikari&custom_title=SANTOSH'S%209D%20CONTRIBUTION%20GRAPH&bg_color=0D1117&color=00ff9d&line=00ff9d&point=FFFFFF&area=true&area_color=00ff9d&hide_border=true" width="95%" />
+</div>
+
+<!-- Weekly Development Breakdown -->
+<h2 align="center">
+  <span style="color: #00ff9d;">⏱️ 9D CODING METRICS ⏱️</span>
+</h2>
+
+<div align="center">
+  <div style="background: rgba(0, 255, 157, 0.05); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid #00ff9d; padding: 15px; display: inline-block;">
+    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=codersantoshadhikari&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00ff9d&text_color=FFFFFF&border_radius=20" width="600" />
+  </div>
+</div>
+
+<!-- Education & Certifications - 9D Cards -->
+<h2 align="center">
+  <span style="color: #00ff9d;">🎓 9D CERTIFICATIONS & EDUCATION 🎓</span>
+</h2>
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div style="border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); width: 220px;">
+      <img src="https://img.icons8.com/fluency/96/mba.png" width="60"/>
+      <br/><b>MBA in Ethical Hacking</b><br/><sub>Cybersecurity Specialization</sub>
+    </div>
+    <div style="border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); width: 220px;">
+      <img src="https://img.icons8.com/fluency/96/google-logo.png" width="60"/>
+      <br/><b>Flutter Certified</b><br/><sub>Google Developers</sub>
+    </div>
+    <div style="border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); width: 220px;">
+      <img src="https://img.icons8.com/fluency/96/unity.png" width="60"/>
+      <br/><b>Unity Certified</b><br/><sub>Professional Developer</sub>
+    </div>
+    <div style="border: 2px solid #00ff9d; border-radius: 25px; padding: 20px; background: rgba(0, 255, 157, 0.05); width: 220px;">
+      <img src="https://img.icons8.com/fluency/96/security-checked.png" width="60"/>
+      <br/><b>CEH Certification</b><br/><sub>EC-Council</sub>
+    </div>
+  </div>
+</div>
+
+<!-- Connect Section with Holographic Cards -->
+<h2 align="center">
+  <span style="color: #00ff9d;">🌐 CONNECT WITH ME - 9D NEXUS 🌐</span>
+</h2>
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+    <a href="https://santoshadhikari.com.np"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/domain.png" width="30"/><br/><b>PORTFOLIO</b></div></a>
+    <a href="https://linkedin.com/in/codersantoshadhikari"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/linkedin.png" width="30"/><br/><b>LINKEDIN</b></div></a>
+    <a href="https://github.com/codersantoshadhikari"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/github.png" width="30"/><br/><b>GITHUB</b></div></a>
+    <a href="https://twitter.com/santosh215"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/twitter.png" width="30"/><br/><b>X (TWITTER)</b></div></a>
+    <a href="https://youtube.com/@smaittechnology"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/youtube.png" width="30"/><br/><b>YOUTUBE</b></div></a>
+    <a href="https://instagram.com/santosh_adhikari_official"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/instagram-new.png" width="30"/><br/><b>INSTAGRAM</b></div></a>
+    <a href="mailto:santosh.ad215@gmail.com"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/gmail.png" width="30"/><br/><b>EMAIL</b></div></a>
+    <a href="https://wa.me/+9779843769073"><div style="border: 1px solid #00ff9d; border-radius: 20px; padding: 12px 20px; background: rgba(0,255,157,0.1);"><img src="https://img.icons8.com/fluency/96/whatsapp.png" width="30"/><br/><b>WHATSAPP</b></div></a>
+  </div>
+</div>
+
+<!-- Support Section with 3D Buttons -->
+<h2 align="center">
+  <span style="color: #00ff9d;">💖 SUPPORT THE 9D JOURNEY 💖</span>
+</h2>
+
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="https://buymeacoffee.com/santoshadh7"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200" /></a>
+    <a href="https://ko-fi.com/santoshadh7"><img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" width="200" /></a>
+    <a href="https://github.com/sponsors/codersantoshadhikari"><img src="https://img.shields.io/badge/SPONSOR-30363D?style=for-the-badge&logo=github-sponsors&logoColor=white&labelColor=0D1117&color=00ff9d" width="200"/></a>
+  </div>
+</div>
+
+<!-- Live Chat Widget with Neon Effect -->
+<div align="center" style="margin: 30px 0;">
+  <a href="https://t.me/santosh215"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0D1117"/></a>
+  <a href="https://discord.gg/santosh215"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0D1117"/></a>
+  <a href="https://signal.me/#santosh215"><img src="https://img.shields.io/badge/Signal-3A76F0?style=for-the-badge&logo=signal&logoColor=white&labelColor=0D1117"/></a>
+</div>
+
+<!-- Dynamic Quote with Matrix Effect -->
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" width="80%" />
+</div>
+
+<!-- Footer with 9D Wave Animation -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=footer&text=9D%20Matrix%20Online&fontSize=30&fontColor=00ff9d&animation=twinkling&fontAlignY=70" />
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=footer&text=9D%20Matrix%20Online&fontSize=30&fontColor=00ff9d&animation=twinkling&fontAlignY=70" width="100%" />
+  </picture>
+</div>
+
+<!-- Hidden Terminal Easter Egg - 9D Edition -->
+<!-- 
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  ┌──(santosh㉿9D-NEXUS)-[~]                                  ║
+  ║  └─$ whoami                                                  ║
+  ║  Senior Software Architect | CEO @ SMAIT Technology | 9D Master ║
+  ║  ┌──(santosh㉿9D-NEXUS)-[~]                                  ║
+  ║  └─$ skills --9d --list                                      ║
+  ║  Mobile Development  [██████████] 95%                        ║
+  ║  Game Development    [██████████] 98%                        ║
+  ║  Cyber Security      [██████████] 92%                        ║
+  ║  Cloud Computing     [██████████] 90%                        ║
+  ║  ┌──(santosh㉿9D-NEXUS)-[~]                                  ║
+  ║  └─$ echo "9D Reality Engine: ACTIVE"                        ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<!-- Auto Update Badge with 9D Status -->
+<div align="center">
+  <sub>
+    <img src="https://img.shields.io/badge/🔄_9D_SYNC-Real_Time-00ff9d?style=flat" />
+    <img src="https://img.shields.io/badge/📅_Last_Update-2025-00ff9d?style=flat" />
+    <img src="https://img.shields.io/badge/⚡_9D_Status-Transcendent-00ff9d?style=flat" />
+    <img src="https://img.shields.io/badge/🌀_Quantum_State-Entangled-00ff9d?style=flat" />
+  </sub>
+</div>
+
+<br/>
